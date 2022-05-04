@@ -10,7 +10,7 @@ export class MoviesComponent implements OnInit{
   title:string = "Les baboins !";
   movies:string[] | undefined;
   imgUrl = "https://picsum.photos/400/200";
-
+  cols = [];
   constructor(service:MoviesService){
     this.movies = service.getMovies();
   }

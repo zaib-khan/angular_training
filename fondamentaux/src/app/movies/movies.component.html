@@ -6,4 +6,15 @@
     <li *ngFor="let movie of movies">{{movie}}</li>
 </ul>
 
-<img src="{{imgUrl}}" alt="">
+<img [src]="imgUrl" alt="">
+
+<table>
+    <tr>
+        <td [attr.colspan]="cols"></td>
+    </tr>
+</table>
+<h3 class=" bg-red-500">Bonjour c'est moi </h3>
+<button class="btn btn-primary">Click moi</button>
+
+
+
