@@ -15,6 +15,34 @@
 </table>
 <h3 class=" bg-red-500">Bonjour c'est moi </h3>
 <button class="btn btn-primary">Click moi</button>
+<button class="btn btn-primary" [style.backgroundColor]="isActive ? 'red' : 'green'">SAVE</button>
 
+<!-- EVENT -->
 
+<button (click)="onSave()">SAVE 2</button>
+<button (click)="onSave2($event)">SAVE 3</button>
 
+<!-- BUBLING -->
+
+<div (click)="onDivClicked()">
+    <button (click)="onSave3($event)">SAVE 4</button>
+
+</div>
+
+<!-- EVENT FILTERING -->
+
+<!-- <input class="border" (keyup)="onKeyup($event)"/> -->
+
+<input class="border" (keyup.enter)="onKeyUp()"/>
+
+<input class="border" (keyup.enter)="onKeyUp2($event)"/>
+
+<input #email (keyup.enter)="onKeyUp3(email.value)" class="border"/>
+
+<input [value]="monEmail" (keyup.enter)="onKeyUp4()"/>
+
+<input [(ngModel)]="tonEmail" (keyup.enter)="onKeyUp5()" />
+
+<span> l'email de ce qagoin est {{tonEmail}}</span>
+
+<fa-icon [icon]="faCoffee"></fa-icon>
