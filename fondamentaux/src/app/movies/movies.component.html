@@ -45,4 +45,14 @@
 
 <span> l'email de ce qagoin est {{tonEmail}}</span>
 
-<fa-icon [icon]="faCoffee"></fa-icon>
+<div>
+    {{course.title | uppercase | lowercase| slice:0:9}}<br/>
+    {{course.student | number: '': 'fr'}}<br/>
+    {{course.ratting|number : '1.2-3' : 'fr'}}<br/>
+    {{course.price|currency:'EUR':'symbol-narrow':'':'fr'}}<br/>
+    {{course.releaseDate|date:'longDate':'':'fr'}}<br/>
+</div>
+
+<div>
+    {{text|summary : 2}}
+</div>

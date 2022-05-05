@@ -4,15 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MoviesComponent } from './movies/movies.component';
-import { SummaryPipe } from './summary.pipe';
-
+import { MovieNameMakerComponent } from './movie-name-maker/movie-name-maker.component';
+import { MovieNameMakerPipePipe } from './movie-name-maker-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MoviesComponent,
-    SummaryPipe
+    MovieNameMakerComponent,
+    MovieNameMakerPipePipe
   ],
   imports: [
     BrowserModule,
@@ -22,5 +21,4 @@ import { SummaryPipe } from './summary.pipe';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
- }
+export class AppModule { }

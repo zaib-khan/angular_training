@@ -1,5 +1,9 @@
 import { Component, OnInit} from '@angular/core';
 import { MoviesService } from '../services/movies.service';
+import { registerLocaleData } from '@angular/common';
+import localFr from '@angular/common/locales/fr'
+
+registerLocaleData(localFr,'fr');
 
 @Component({
   selector: 'movies',
@@ -69,5 +73,15 @@ export class MoviesComponent implements OnInit{
     console.log(this.tonEmail);
     
   }
+
+  course = {
+    title:"Tout connaitre sur les pipes de A a Z",
+    ratting:4.2154987,
+    student:3580,
+    price:199.99,
+    releaseDate:new Date(2020,1,1),
+  }
+
+  text:string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos laboriosam accusantium pariatur obcaecati nisi quas aliquid repellendus ipsa eaque consequatur possimus earum suscipit eligendi expedita ullam consectetur, maxime qui.';
 
 }
