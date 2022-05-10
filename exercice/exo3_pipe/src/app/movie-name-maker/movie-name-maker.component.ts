@@ -12,6 +12,6 @@ export class MovieNameMakerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  movieName:string="";
+  movieName:string = "";
 
 }
