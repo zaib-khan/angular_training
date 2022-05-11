@@ -21,7 +21,6 @@ export class LikeCounterComponent {
   
 
 
-
   clickEvent(){
     this.changeIsLiked();
     this.toggleLike();
@@ -37,9 +36,12 @@ export class LikeCounterComponent {
   getIsLiked(){
     return this.tweet.isLiked;
   }
+
+
   changeIsLiked(){
     this.tweet.isLiked = !this.tweet.isLiked;
   }
+  
   toggleLike(){
     if(this.getIsLiked()){
       this.tweet.likesCount++;
