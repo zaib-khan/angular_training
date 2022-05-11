@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let item of tweets">
+        <ng-content select=".test0" [tweetObj]="item"></ng-content>
+    </li>
+</ul>
