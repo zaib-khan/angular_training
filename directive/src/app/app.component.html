@@ -1,0 +1,110 @@
+
+
+<div *ngIf="liste.length > 0">Il y a des elements</div>
+
+
+<div *ngIf="liste.length == 0">il y a pas d'elements</div>
+
+<div class="lesson-list" *ngIf="lessons else loading">bonjor</div>
+
+
+<ng-template #loading>loading...</ng-template>
+
+<div *ngIf="liste.length > 0 then yesList else noList">GG</div>
+
+
+<ng-template #yesList>il y a des element</ng-template>
+<ng-template #noList>il y a pas des element</ng-template>
+
+
+<ul class="nav nav-pills">
+  <li class="nav-item"><a href="#" [class.active]="viewMode == 'map'" class="nav-link" (click)="viewMode = 'map'">Map view</a></li>
+  <li class="nav-item"><a href="#" [class.active]="viewMode == 'list'" class="nav-link" (click)="viewMode = 'list'">List view</a></li>
+</ul>
+
+
+<div  [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">Map view Content</div>
+  <div *ngSwitchCase="'list'">list view Content</div>
+  <div *ngSwitchDefault>Other content</div>
+</div>
+
+<ul>
+  <li *ngFor="let course of courses">{{course.name}}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let course of courses; index as i">{{i}}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let course of courses; even as isEven">{{course.name}} <span *ngIf="isEven">*</span></li>
+</ul>
+
+
+<button (click)="onAdd()">Add</button>
+
+<ul>
+  <li *ngFor="let course of courses; index as i">{{course.name}} {{i+1}}</li>
+</ul>
+
+
+
+
+<ul>
+  <li *ngFor="let course of courses; index as i">{{course.name}} {{i+1}}<button (click)="onRemove(course)">X</button></li>
+</ul>
+
+
+
+
+<ul>
+  <li *ngFor="let course of courses; index as i">{{course.name}} {{i+1}}<button (click)="onChange(course)">X</button></li>
+</ul>
+
+<fa-icon [icon]="isSelected ? Sstar : Rstar" (click)="onClick()"></fa-icon>
+
+<!-- ---------------------------- SANS ng class ---------------------------- -->
+<!-- <span 
+  class="toto" 
+  [class.active]="isSelected" 
+  [class.inactive]="!isSelected"
+  (click)="onClick()"
+  >
+  toto
+</span> -->
+<!-- ---------------------------- avec ng class ---------------------------- -->
+<span 
+  class="toto" 
+  [ngClass]="{
+    'active':isSelected,
+    'inactive':!isSelected
+  }"
+  (click)="onClick()"
+  >
+  toto
+</span>
+
+<!-- ------------------------------ NG STYLE ------------------------------- -->
+
+<br>
+<!-- ---------------------------- sans ng style ---------------------------- -->
+<!-- <button
+  [style.backgroundColor]="canSave ? 'blue':'gray'"
+  [style.color]="canSave ? 'white':'black'"
+  [style.fontWeight]="canSave ? 'bold':'normal'"
+>
+Button
+</button> -->
+
+<!-- ---------------------------- avec ng style ---------------------------- -->
+
+<button
+  [ngStyle]="{
+    'backgroundColor':canSave ? 'blue':'gray',
+    'color':canSave ? 'white':'black',
+    'fontWeight':canSave ? 'bold':'normal'
+  }"
+>
+Button
+</button>

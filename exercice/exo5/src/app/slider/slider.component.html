@@ -1,0 +1,58 @@
+<!-- <fa-icon [icon]="upArrow"></fa-icon> -->
+<!-- 
+
+<div class="zippy">
+    <div class="zippy-head" (click)="zippyClickEvent()">
+        <span>Shopping list</span>
+        <fa-icon [icon]="isActive ? upArrow:downArrow"></fa-icon>
+    </div>
+    <div class="zippy-body" 
+        [ngStyle]="{
+            'display': isActive ? 'block':'none'
+        }"
+    >test 123</div>
+</div> -->
+
+
+
+
+<div class="zippy">
+    <div class="zippy-head" (click)="zippyClickEvent()">
+        {{title}}
+        <fa-icon [icon]="isExpand?upArrow:downArrow"></fa-icon>
+    </div>
+    <div class="zippy-head" *ngIf="isExpand" [class.expanded]="isExpand">
+        <ng-content></ng-content>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

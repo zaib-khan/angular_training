@@ -1,0 +1,20 @@
+.zippy{
+    border: 1px solid darkkhaki;
+    border-radius: 2px;
+}
+
+.zippy-head{
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.zippy-body{
+    padding: 20px;
+}
+
+.expanded{
+    background-color: lightgray;
+}
