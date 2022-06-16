@@ -1,0 +1,21 @@
+svg{
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px;
+    transition: .4s;
+    &:hover{
+        background-color:cornflowerblue;
+        border-radius: 100%;
+    }
+
+}
+
+div{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+}

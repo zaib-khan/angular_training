@@ -1,0 +1,12 @@
+a{
+    background-color: cornflowerblue;
+    font-size: 30px;
+    padding: 10px;
+    transition: .5s;
+    cursor: pointer;
+    &:hover{
+        background-color: cadetblue;
+        color: wheat;
+        border-radius: 50px;
+    }
+}

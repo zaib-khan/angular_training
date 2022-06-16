@@ -1,0 +1,17 @@
+nav a {
+    margin-left: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: bisque;
+    &:hover{
+        background-color: blueviolet;
+    }
+    &.active{
+        color: red;
+    }
+}
+
+nav svg{
+    width: 30px;
+    cursor: pointer;
+}

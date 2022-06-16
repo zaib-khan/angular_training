@@ -1,0 +1,25 @@
+div{
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+    &:hover{
+        background-color: fuchsia;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
